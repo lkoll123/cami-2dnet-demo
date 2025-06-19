@@ -1,6 +1,6 @@
 "use client"
 
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import { useState } from 'react';
 
 export default function Home() {

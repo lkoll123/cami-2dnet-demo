@@ -1,0 +1,25 @@
+.heading {
+    margin: 5px 0 0 20px;
+}
+.subHeading {
+    margin: 3px 0 0 20px;
+}
+.analyzeButton {
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    width: 604px;
+    height: 30px;
+    background-color: rgb(26, 182, 151);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.analyzeButton:hover {
+    background-color: rgb(18, 214, 175);
+    transition: 0.1s ease;
+
+}
