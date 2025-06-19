@@ -1,6 +1,6 @@
 .panel {
     position: relative;
-    width: 600px;
+    width: 550px;
     height: 250px;
     background: rgb(77, 77, 77);
     border-radius: 10px;
@@ -93,4 +93,52 @@
     height: 213px;
     position: absolute;
     top: 0px;
+}
+
+.recIcon {
+    z-index: 2;
+    color: red;
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.resetBtn {
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0px;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(203, 32, 32);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.resetBtn:hover {
+    transition: 0.1s ease;
+    background-color: rgb(255, 0, 0);
+
+}
+
+.fileList {
+    width: 100%;
+    height: 140px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fileList li {
+   list-style-type: none;     /* no bullet */
+  padding: 6px 12px;         /* nice left/right space */
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* faint separator */
+  white-space: nowrap;       /* keep long names on one line */
+  text-overflow: ellipsis;   /* truncate with … */
+  overflow: hidden;
+
 }

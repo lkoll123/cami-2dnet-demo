@@ -1,0 +1,41 @@
+.modelSelector {
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 120px;
+    width: 550px;
+    background: rgb(77, 77, 77);
+    border-radius: 10px;
+    border: 1px solid rgb(150, 150, 150); 
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.group h4 {
+    margin-left: 10px;
+}
+
+.group select {
+    background: rgba(0, 0, 0, 0);
+    height: 25px;
+    color: white;
+    border-radius: 5px;
+    border: 1.5px solid rgb(150, 150, 150); ;
+    margin-top: 5px;
+    -webkit-appearance: none;    /* Safari & Chrome */
+    -moz-appearance: none; 
+}
+
+.group select:focus {
+  outline: none;
+  border-color: rgb(0, 234, 164);
+  box-shadow: 0 0 0 2px rgba(0,234,164,0.4);
+}

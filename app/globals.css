@@ -90,7 +90,7 @@ body::before {
 
 .home-card {
   flex: 1 1 160px;                    /* min 160 px, grow as space allows */
-  background: rgba(255,255,255,0.07);
+  background: rgb(30, 163, 137);
   border-radius: 12px;
   padding: 1.2rem;
   text-align: center;
@@ -99,7 +99,7 @@ body::before {
   transition: background 150ms;
 }
 
-.home-card:hover { background: rgba(255,255,255,0.13); }
+.home-card:hover { background: rgb(11, 222, 179); }
 
 .home-icon {
   display: block;

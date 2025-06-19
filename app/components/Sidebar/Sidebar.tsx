@@ -20,7 +20,7 @@ export default function Sidebar({isOpen, setIsOpen}: sideBarProps) {
     const navItems: navItem[] = [
         {label: "Home", icon: "bx bx-home", href: "/"}, 
         {label: "Upload", icon: "bx bx-upload", href: "/upload"}, 
-        {label: "Diagnose", icon: "bx bx-pulse", href: ""}
+        {label: "Diagnose", icon: "bx bx-pulse", href: "/diagnose"}
     ]
     return (
         <div className={`${styles.sideBar} ${isOpen ? styles.open : styles.closed}`}>
