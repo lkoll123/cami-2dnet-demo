@@ -1,26 +1,108 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------- reset ---------- */
+body {
+  background-color: rgba(20,20,20,0.6);
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  color: white;
+  overflow: hidden;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---------- animated background ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;          /* full-viewport */
+  z-index: -1;
+
+  /*  ⇢ four big radial blobs (one per corner)  */
+  background:
+    radial-gradient(65vmax at 0%   0%,  rgba(  25, 247, 206,0.55) 0%, transparent 80%),
+    radial-gradient(70vmax at 100% 0%,  rgba(157, 14, 240,0.50) 0%, transparent 80%),
+    radial-gradient(60vmax at 0% 100%,  rgba(52, 14, 240,0.45) 0%, transparent 80%),
+    radial-gradient(65vmax at 100%100%, rgba(  25, 247, 206,0.55) 0%, transparent 80%);
+
+  background-repeat: no-repeat;   /* no tiling → no hard edges */
+  animation: blobDrift 20s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* gentle, almost-imperceptible motion */
+@keyframes blobDrift {
+  0%,100% {
+    background-position:
+      0%   0%,       /* TL */
+      100% 0%,       /* TR */
+      0%  100%,      /* BL */
+      100% 100%;     /* BR */
+  }
+  50% {              /* pull each blob far toward centre */
+    background-position:
+      15%  10%,      /* TL moves ↓→ */
+      85%  12%,      /* TR moves ↓← */
+      12%  85%,      /* BL moves ↑→ */
+      88%  88%;      /* BR moves ↑← */
   }
 }
+/* ---------- modal shell ---------- */
+.main {
+  position: fixed;
+  width: 90vw;
+  height: 94vh;
+  margin-left: 5vw;
+  margin-top: 3vh;
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;          /* ❶ make it a row container */
+  overflow: hidden;       /* keep children inside the rounded corners */
+}
+
+/* ---------- page content area ---------- */
+.main-component {
+  flex: 1;                /* ❷ take all remaining width */
+  height: 100%;
+  background: rgba(36, 36, 35, 0.96);  /* solid glass panel */
+  backdrop-filter: blur(12px);
+  border-radius: 0 30px 30px 0;        /* right corners stay rounded */
+  overflow-y: auto;       /* scroll content if it grows */
+}
+
+.home-shell {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.home-title   { font-size: 1.8rem; font-weight: 600; }
+.home-sub     { font-size: 0.95rem; color: #cbd5e1; }
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-card {
+  flex: 1 1 160px;                    /* min 160 px, grow as space allows */
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #f1f5f9;
+  transition: background 150ms;
+}
+
+.home-card:hover { background: rgba(255,255,255,0.13); }
+
+.home-icon {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
 }
