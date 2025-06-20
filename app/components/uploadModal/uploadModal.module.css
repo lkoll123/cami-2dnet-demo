@@ -6,7 +6,7 @@
     border-radius: 10px;
     border: 2px solid rgb(150, 150, 150); 
     margin-left: 20px;
-    margin-top: 15px;
+    margin-top: 12px;
 
 }
 
@@ -140,5 +140,7 @@
   white-space: nowrap;       /* keep long names on one line */
   text-overflow: ellipsis;   /* truncate with … */
   overflow: hidden;
+  height: 20px;
+  flex-shrink: 0; 
 
 }
