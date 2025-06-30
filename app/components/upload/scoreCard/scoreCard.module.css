@@ -1,0 +1,56 @@
+.container {
+    margin-top: 79px;
+    margin-left: 0px;
+    height: 515px;
+    width: 580px;
+    background: rgb(29, 29, 29);
+    border-radius: 10px;
+    border: 2px solid rgb(150, 150, 150); 
+    overflow: scroll;
+
+}.chartWrapper {
+  background: rgb(29, 29, 29);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: visible; /* allow chart tooltips to overflow */
+}
+
+.header {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.message {
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* Global override for tooltip */
+.recharts-tooltip-wrapper {
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Tooltip content styling */
+.recharts-tooltip-label, .recharts-tooltip-item {
+  color: #fff;
+}
+
+/* X / Y axis styling */
+.recharts-cartesian-axis-tick-value {
+  fill: #ddd;
+  font-size: 0.85rem;
+}
+
+/* Grid lines subtle */
+.recharts-cartesian-grid-line {
+  stroke: rgba(255, 255, 255, 0.1);
+}

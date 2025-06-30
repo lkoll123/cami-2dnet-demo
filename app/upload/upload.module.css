@@ -8,7 +8,7 @@
     margin-left: 20px;
     margin-top: 12px;
     border-radius: 8px;
-    width: 554px;
+    width: 644px;
     height: 35px;
     background-color: rgb(26, 182, 151);
     color: white;
@@ -22,4 +22,35 @@
     background-color: rgb(18, 214, 175);
     transition: 0.1s ease;
 
+}
+
+.errorMessage {
+    font-weight: 15px;
+    color: rgb(203, 32, 32);
+    margin: 0 0 0 20px;
+
+}
+
+.uploadPage {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.downloadCsv {
+    margin-top: 12px;
+    border-radius: 8px;
+    width: 584px;
+    height: 45px;
+    background-color: rgb(26, 182, 151);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.downloadCsv:hover {
+    background-color: rgb(18, 214, 175);
+    transition: 0.1s ease;
 }

@@ -1,12 +1,13 @@
 .panel {
     position: relative;
-    width: 550px;
+    width: 640px;
     height: 250px;
     background: rgb(77, 77, 77);
     border-radius: 10px;
     border: 2px solid rgb(150, 150, 150); 
     margin-left: 20px;
     margin-top: 12px;
+    margin-right: 20px;
 
 }
 
