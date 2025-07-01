@@ -28,14 +28,16 @@ export default function Diagnose() {
       return (
         <div className="main">
           <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}></Sidebar>
-          <div className={`main-component ${isOpen ? 'open' : 'closed'}`}>
-            <StepProgress currentStep={step}></StepProgress>
+          <div className={`main-component ${isOpen ? 'open' : 'closed'} ${styles.diagnoseMain}`}>
+            <div className={styles.stepProgressWrapper}>
+              <StepProgress currentStep={step} />
+            </div>
             <div className={styles.step_content}>
               {renderStepContent()}
             </div>
-            <div className={styles.step_buttons}>
-              <button disabled={step == 2} onClick={() => setStep(step + 1)}>Next</button>
-              <button disabled={step == 0} onClick={() => setStep(step - 1)}>Back</button>
+            <div className={styles.stepButtons}>
+              <button className={styles.stepButton} disabled={step == 0} onClick={() => setStep(step - 1)}>Back</button>
+              <button className={styles.stepButton} disabled={step == 2} onClick={() => setStep(step + 1)}>Next</button>
             </div>
           </div>
             

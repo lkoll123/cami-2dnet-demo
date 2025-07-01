@@ -1,0 +1,38 @@
+.diagnoseMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ this centers horizontally */
+  width: 100%;
+}
+.stepProgressWrapper {  
+  width: 100%;                   
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.stepButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.stepButton {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    background: rgb(20, 162, 134);
+    color: white;
+    border: None;
+    transition: 0.2s ease;
+    cursor: pointer;
+
+}
+
+.stepButton:hover {
+    transition: 0.2s ease;  
+    background: rgb(26, 207, 171);
+}
