@@ -99,6 +99,10 @@ body::before {
   transition: background 150ms;
 }
 
+.home-card i {
+  margin-right: 20px;
+}
+
 .home-card:hover { background: rgb(11, 222, 179); }
 
 .home-icon {

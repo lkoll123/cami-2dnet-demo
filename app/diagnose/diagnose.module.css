@@ -1,3 +1,9 @@
+.title {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 .diagnoseMain {
   display: flex;
   flex-direction: column;
@@ -6,9 +12,9 @@
 }
 .stepProgressWrapper {  
   width: 100%;                   
-  padding: 16px 0;
   display: flex;
   justify-content: center;
+  margin-top: 0px;
 }
 
 .stepButtons {
