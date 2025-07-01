@@ -31,7 +31,7 @@ export default function ScoreCard({ loading, scores }: ScoreCardProps) {
           }));
           return (
             <div key={idx} className={styles.chartWrapper}>
-              <h4 className={styles.header}>Pair {idx + 1}</h4>
+              <h4 className={styles.header}>Assessment {idx + 1}</h4>
               <ResponsiveContainer width="100%" height={280}>
                 <BarChart
                   data={data}
