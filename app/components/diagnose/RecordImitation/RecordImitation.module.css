@@ -1,0 +1,86 @@
+.slide {
+    width: 1000px;
+    height: 500px;
+    background: rgb(77, 77, 77);
+    box-shadow:
+    0 6px 20px rgba(26, 207, 171, 0.15), 
+    0 12px 20px rgba(0, 52, 29, 0.5);        
+     border-radius: 12px; 
+     margin-top: 0px;
+     margin-bottom: 0px;
+     padding: 7px;
+     display: flex;
+     flex-direction: column;
+}
+
+.slide h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.videoRow {
+    display: flex;
+    justify-content: space-evenly;
+}
+.videoColumn {
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.demoColumn {
+    height: 300px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.videoColumn video {
+    width: auto;
+    height: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.demoColumn video {
+    width: auto;
+    height: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.videoColumn p {
+    margin: 0;
+}
+
+.demoColumn p {
+    margin: 0;
+}
+
+.recordButton {
+  align-self: center;
+  width: 20%;
+  height: 30px;
+  margin-left: 40%;
+  background-color: rgb(203, 32, 32);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  border: none;
+  transition: 0.2s ease;
+  margin-top: 50px; /* increase this */
+  margin-bottom: 16px; /* force spacing from bottom */
+  cursor: pointer;
+}
+
+.recordButton:hover {
+    transition: 0.2s ease;
+    background-color: rgb(255, 0, 0)
+}
+

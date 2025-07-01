@@ -20,28 +20,8 @@
 
 .slide video {
     width: auto;
-    height: 370px;
+    height: 400px;
     align-self: center;
     border-radius: 12px;
 }
 
-.slide button {
-    width: 150px;
-    height: 37px;
-    align-self: center;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
-    background: rgb(20, 162, 134);
-    color: white;
-    border: None;
-    transition: 0.2s ease;
-    margin-top: 10px;
-    cursor: pointer;
-
-}
-
-.slide button:hover {
-    transition: 0.2s ease;  
-    background: rgb(26, 207, 171);
-}

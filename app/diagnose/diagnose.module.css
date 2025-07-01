@@ -35,10 +35,15 @@
     border: None;
     transition: 0.2s ease;
     cursor: pointer;
+    margin-top: 0px;
 
 }
 
 .stepButton:hover {
     transition: 0.2s ease;  
     background: rgb(26, 207, 171);
+}
+
+.step-content {
+    width: 100%
 }

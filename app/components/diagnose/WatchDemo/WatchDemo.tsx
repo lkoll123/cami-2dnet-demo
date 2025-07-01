@@ -1,14 +1,18 @@
 "use client"
+import styles from "./WatchDemo.module.css"
 
 export default function WatchDemo() {
   return (
-    <div>
-      <h2>Step 1: Watch Demonstration</h2>
-      <p>Here you will watch a sample performance.</p>
+    <div className={styles.slide}>
+      <h2>Step 1: Watch the Demonstration</h2>
+      <p>Please watch the demonstration video carefully.</p>
       {/* Replace with actual video player */}
-      <div style={{ width: '100%', height: 300, backgroundColor: '#222', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        Demo video placeholder
-      </div>
+      <video
+        src="/videos/demo.mp4"
+        controls
+      >
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 }
